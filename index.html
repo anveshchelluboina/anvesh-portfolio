@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +10,7 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Simple scrollbar for a cleaner look */
+        /* Custom scrollbar for a cleaner look */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -29,16 +28,19 @@
 </head>
 <body class="bg-gray-100 text-slate-800">
 
-    <!-- Header & Navigation --><header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-slate-200">
-        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-slate-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo / Name --><div class="flex-shrink-0">
-                   <a href="#" class="text-3xl md:text-5xl font-bold text-slate-900">
+                <!-- Logo / Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl md:text-3xl font-bold text-slate-900">
                         Anvesh Chelluboina
-                            </a>
+                    </a>
                 </div>
                 
-                <!-- Desktop Navigation --><div class="hidden md:block">
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="#home" class="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-semibold">Home</a>
                         <a href="#about" class="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-semibold">About</a>
@@ -46,105 +48,106 @@
                         <a href="#contact" class="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-semibold">Contact</a>
                     </div>
                 </div>
-                
-                <!-- Mobile Menu Button (optional - keeping it simple) --><div class="md:hidden">
-                    <!-- Mobile menu can be added here if needed --></div>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section --><section id="home" class="py-6 md:py-10 bg-white">
-           <div class="max-w-7xl mx-auto px-6 lg:px-8">
-               <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <!-- Hero Text --><div class="text-center md:text-left">
-                     <h2 class="text-xl md:text-2xl font-bold text-slate-900 leading-tight">
-                    CV Writer | Visa Consultant | Travel Planner
-                                </h2>
-                               
-                        <h1 class="mt-4 text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
+        <!-- Hero Section -->
+        <section id="home" class="py-12 md:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Hero Text (Left Column) -->
+                    <div class="lg:col-span-7 text-center md:text-left">
+                        <h2 class="text-xl md:text-2xl font-bold text-slate-900 leading-tight">
+                            CV Writer | Visa Consultant | Travel Planner
+                        </h2>
+                                
+                        <h1 class="mt-4 text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
                             Your Expert in Academics, Careers & Travel
                         </h1>
-                        <p class="mt-6 text-base font-semibold max-w-lg mx-auto md:mx-0">
+                        
+                        <p class="mt-6 text-base md:text-lg text-slate-600 max-w-2xl mx-auto md:mx-0">
                             I provide top-tier, personalized services for students and professionals. From AI-free academic assistance to expert CV writing and seamless visa applications, I'm here to help you succeed.
                         </p>
 
-                        <ul class="mt-5 text-base text-slate-700 space-y-1">
-                        <li>✔ 12+ Years Professional Experience</li>
-                        <li>✔ MSc Project Management (Merit) – Arden University, United Kingdom</li>
-                        <li>✔ CMI Level 7 Strategic Management</li>
-                        <li>✔ UAE Based HVAC Professional</li>
-                        <li>✔ Travelled to 24+ Countries</li>
+                        <ul class="mt-6 text-base text-slate-700 space-y-2">
+                            <li class="flex items-center justify-center md:justify-start gap-2">
+                                <span class="text-blue-600 font-bold">✔</span> 12+ Years Professional Experience
+                            </li>
+                            <li class="flex items-center justify-center md:justify-start gap-2">
+                                <span class="text-blue-600 font-bold">✔</span> MSc Project Management (Merit) – Arden University, United Kingdom
+                            </li>
+                            <li class="flex items-center justify-center md:justify-start gap-2">
+                                <span class="text-blue-600 font-bold">✔</span> CMI Level 7 Strategic Management
+                            </li>
+                            <li class="flex items-center justify-center md:justify-start gap-2">
+                                <span class="text-blue-600 font-bold">✔</span> UAE Based HVAC Professional
+                            </li>
+                            <li class="flex items-center justify-center md:justify-start gap-2">
+                                <span class="text-blue-600 font-bold">✔</span> Travelled to 24+ Countries
+                            </li>
                         </ul>
 
+                        <!-- Action Buttons -->
+                        <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+                            <a href="#services"
+                               class="bg-blue-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                                My Services
+                            </a>
 
-                     <div class="mt-8 flex justify-center md:justify-start gap-4">
+                            <a href="https://wa.me/971568836143"
+                               target="_blank"
+                               class="bg-green-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300">
+                                WhatsApp Me
+                            </a>
 
-    <a href="#services"
-       class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-        My Services
-    </a>
-
-    <a href="https://wa.me/971568836143"
-       target="_blank"
-       class="inline-block bg-green-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300">
-        WhatsApp Me
-    </a>
-
-   <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-
-    <a href="#services"
-       class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-        My Services
-    </a>
-
-    <a href="https://wa.me/971568836143"
-       target="_blank"
-       class="inline-block bg-green-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300">
-        WhatsApp Me
-    </a>
-
-    <a href="#contact"
-       class="inline-block bg-indigo-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
-        📅 Book a Free Call
-    </a>
-
-</div>
-
-<div class="flex justify-center lg:justify-end">
-    <img src="Anvesh.PNG"
-         alt="Anvesh Chelluboina"
-         class="w-72 md:w-80 lg:w-[420px] rounded-3xl shadow-2xl">
-</div>
+                            <a href="#contact"
+                               class="bg-indigo-600 text-white font-medium px-6 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
+                                📅 Book a Free Call
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Hero Image (Right Column) -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                        <img src="Anvesh.PNG"
+                             alt="Anvesh Chelluboina"
+                             class="w-full max-w-md lg:max-w-full h-auto rounded-3xl shadow-2xl object-cover">
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- About Section --><section id="about" class="py-14 md:py-20 bg-gray-50">
+        <!-- About Section -->
+        <section id="about" class="py-14 md:py-20 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-slate-900 sm:text-4xl">About Me</h2>
-                    <p class="mt-4 text-base font-semibold">A little bit about my mission and approach.</p>
+                    <h2 class="text-4xl font-bold text-slate-900">About Me</h2>
+                    <p class="mt-4 text-base font-semibold text-slate-600">A little bit about my mission and approach.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Personal Intro --><div class="bg-white p-8 rounded-xl shadow-lg md:col-span-1">
-                        <p class="mt-4 text-slate-600">
+                    <!-- Personal Intro -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg md:col-span-1">
+                        <p class="text-slate-600 leading-relaxed">
                             I'm Anvesh Chelluboina, a UAE-based professional with over 12 years of experience in facilities management, career support, travel planning and visa assistance. I hold an MSc in Project Management with Merit from Arden University and a CMI Level 7 Diploma in Strategic Management and Leadership Practice. Having travelled across 24+ countries, I help students and professionals achieve their academic, career and travel goals with practical guidance and personalized support.
                         </p>
                     </div>
                     
-                    <!-- Vision & Mission --><div class="bg-white p-8 rounded-xl shadow-lg md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <!-- Vision & Mission -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
                         <div>
                             <h3 class="text-2xl font-semibold text-slate-900">My Vision</h3>
-                            <p class="mt-4 text-slate-600">
+                            <p class="mt-4 text-slate-600 leading-relaxed">
                                 To be the most trusted partner for students and professionals seeking to overcome academic, career, and travel hurdles, enabling them to achieve their ambitions with confidence.
                             </p>
                         </div>
                         <div>
                             <h3 class="text-2xl font-semibold text-slate-900">My Mission</h3>
-                            <p class="mt-4 text-slate-600">
+                            <p class="mt-4 text-slate-600 leading-relaxed">
                                 To deliver exceptional, high-quality freelance services from AI-free, plagiarism-free assignments and optimized career documents to meticulous travel and visa planning all tailored to each client's unique needs.
                             </p>
                         </div>
@@ -153,179 +156,168 @@
             </div>
         </section>
 
-        <!-- Services Section --><section id="services" class="py-20 md:py-28 bg-white">
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">My Services</h2>
-                    <p class="mt-4 text-base font-semibold">How I can help you succeed.</p>
+                    <p class="mt-4 text-base font-semibold text-slate-600">How I can help you succeed.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Service Card 1: CV & LinkedIn --><div class="flex flex-col bg-gray-50/50 border border-slate-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <!-- Service 1 -->
+                    <div class="flex flex-col bg-gray-50 border border-slate-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div class="flex-shrink-0">
-                            <!-- Icon: Briefcase --><svg class="h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            <svg class="h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
                         </div>
                         <div class="mt-4 flex-grow">
-                            <h3 class="text-xl font-semibold text-slate-900">CV Writing & LinkedIn Optimizing</h3>
+                            <h3 class="text-xl font-semibold text-slate-900">CV Writing & LinkedIn</h3>
                             <p class="mt-3 text-slate-600">
-                                Crafting professional CVs tailored for the UAE and global markets. I optimize your LinkedIn to attract recruiters and opportunities.
+                                Crafting professional CVs tailored for the UAE and global markets. I optimize your LinkedIn to attract recruiters.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Service Card 2: Visa Assistance --><div class="flex flex-col bg-gray-50/50 border border-slate-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <!-- Service 2 -->
+                    <div class="flex flex-col bg-gray-50 border border-slate-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div class="flex-shrink-0">
-                            <!-- Icon: Plane --><svg class="h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4.5 21 3c-1.5-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 5.2 5.2c.4.4 1 .5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>
+                            <svg class="h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4.5 21 3c-1.5-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 5.2 5.2c.4.4 1 .5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>
                         </div>
                         <div class="mt-4 flex-grow">
                             <h3 class="text-xl font-semibold text-slate-900">Visa Assistance</h3>
                             <p class="mt-3 text-slate-600">
-                                Full support for Schengen, Canada, UK, and other visas. From compelling cover letters to flawless application submission.
+                                Full support for Schengen, Canada, UK, and other visas. From compelling cover letters to flawless submissions.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Service Card 3: Travel Planning --><div class="flex flex-col bg-gray-50/50 border border-slate-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <!-- Service 3 -->
+                    <div class="flex flex-col bg-gray-50 border border-slate-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div class="flex-shrink-0">
-                            <!-- Icon: Globe --><svg class="h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            <svg class="h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                         </div>
                         <div class="mt-4 flex-grow">
-                            <h3 class="text-xl font-semibold text-slate-900">Budget Travel Plans & Guiding</h3>
+                            <h3 class="text-xl font-semibold text-slate-900">Budget Travel Plans</h3>
                             <p class="mt-3 text-slate-600">
                                 Expert travel guiding and custom-built budget travel plans that maximize your experience without breaking the bank.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Service Card 4: Assignment Assistance --><div class="flex flex-col bg-gray-50/50 border border-slate-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <!-- Service 4 -->
+                    <div class="flex flex-col bg-gray-50 border border-slate-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <div class="flex-shrink-0">
-                            <!-- Icon: Book Open --><svg class="h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            <svg class="h-10 w-10 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                         </div>
                         <div class="mt-4 flex-grow">
-                            <h3 class="text-xl font-semibold text-slate-900">Academic Assignment Assistance</h3>
+                            <h3 class="text-xl font-semibold text-slate-900">Academic Assistance</h3>
                             <p class="mt-3 text-slate-600">
-                                Plagiarism-free and AI-free support for university students (UK, Italy, etc.). Ensuring high-quality work and good plagiarism scores.
+                                Plagiarism-free and AI-free support for university students. Ensuring high-quality work and excellent results.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-<section class="py-20 bg-white">
-<div class="max-w-6xl mx-auto px-4">
 
-<h2 class="text-3xl font-bold text-center mb-12">Client Feedback</h2>
+        <!-- Testimonials -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Client Feedback</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- CV Feedback -->
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <h3 class="text-xl font-semibold mb-3">CV Preparation</h3>
+                        <p class="text-slate-600">"Excellent CV preparation and professional guidance."</p>
+                        <p class="mt-2 font-semibold text-blue-600">— Jesmitha Kumari</p>
+                        <hr class="my-4">
+                        <p class="text-slate-600">"Highly professional CV that helped improve my job applications."</p>
+                        <p class="mt-2 font-semibold text-blue-600">— Kiran Tadipalli</p>
+                        <p class="mt-4 text-amber-500 font-semibold">★★★★★</p>
+                    </div>
 
-<div class="grid md:grid-cols-3 gap-6">
+                    <!-- Visa Feedback -->
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <h3 class="text-xl font-semibold mb-3">Visa Assistance</h3>
+                        <p class="text-slate-600">"Very helpful with visa documentation and cover letters."</p>
+                        <p class="mt-2 font-semibold text-blue-600">— Khurram Ali</p>
+                        <hr class="my-4">
+                        <p class="text-slate-600">"Professional guidance throughout my visa application process."</p>
+                        <p class="mt-2 font-semibold text-blue-600">— Abid Hassan</p>
+                        <p class="mt-4 text-amber-500 font-semibold">★★★★★</p>
+                    </div>
 
-    <!-- CV Writing -->
-    <div class="bg-gray-50 p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-3">CV Preparation</h3>
-
-        <p>"Excellent CV preparation and professional guidance."</p>
-        <p class="mt-3 font-semibold text-blue-600">— Jesmitha Kumari</p>
-
-        <hr class="my-4">
-
-        <p>"Highly professional CV that helped improve my job applications."</p>
-        <p class="mt-3 font-semibold text-blue-600">— Kiran Tadipalli</p>
-
-        <p class="mt-4 font-semibold">★★★★★</p>
-    </div>
-
-    <!-- Visa -->
-    <div class="bg-gray-50 p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-3">Visa Assistance</h3>
-
-        <p>"Very helpful with visa documentation and cover letters."</p>
-        <p class="mt-3 font-semibold text-blue-600">— Khurram Ali</p>
-
-        <hr class="my-4">
-
-        <p>"Professional guidance throughout my visa application process."</p>
-        <p class="mt-3 font-semibold text-blue-600">— Abid Hassan</p>
-
-        <p class="mt-4 font-semibold">★★★★★</p>
-    </div>
-
-    <!-- Assignments -->
-    <div class="bg-gray-50 p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-3">Assignment Assistance</h3>
-
-        <p>"Best assignment support. I received excellent grades."</p>
-        <p class="mt-3 font-semibold text-blue-600">— Lawrence</p>
-
-        <hr class="my-4">
-
-        <p>"Well-structured assignment delivered on time with great quality."</p>
-        <p class="mt-3 font-semibold text-blue-600">— Alice M</p>
-
-        <p class="mt-4 font-semibold">★★★★★</p>
-    </div>
-
-</div>
-</div>
-</section>
-        <!-- Contact Section --><section id="contact" class="py-20 md:py-28 bg-gray-50">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Get in Touch</h2>
-                <p class="mt-4 text-base font-semibold">
-                    Ready to get started? Let's talk about your next project.
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-6">
-                    <!-- Email --><a href="mailto:anvesh.chelluboina@gmail.com" class="inline-flex items-center justify-center gap-2 bg-white px-6 py-3 rounded-lg shadow-lg text-slate-800 font-medium hover:bg-slate-100 transition-colors duration-300">
-                        <!-- Icon: Mail --><svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        anvesh.chelluboina@gmail.com
-                    </a>
-                    <a href="https://www.linkedin.com/in/anveshchelluboina/" target="_blank"
-class="inline-flex items-center justify-center gap-2 bg-blue-700 px-6 py-3 rounded-lg shadow-lg text-white font-medium hover:bg-blue-800 transition-colors duration-300">
-
-<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-<path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.5 8h4V24h-4V8zm7 0h3.8v2.2h.1c.53-1 1.84-2.2 3.79-2.2 4.05 0 4.8 2.66 4.8 6.11V24h-4v-7.79c0-1.86-.03-4.26-2.6-4.26-2.6 0-3 2.03-3 4.12V24h-4V8z"/>
-</svg>
-
-LinkedIn
-</a>
-                    <a href="https://wa.me/971568836143" target="_blank"
-class="inline-flex items-center justify-center gap-2 bg-green-600 px-6 py-3 rounded-lg shadow-lg text-white font-medium hover:bg-green-700 transition-colors duration-300">
-WhatsApp
-</a>
-                </div>
-                <div class="mt-8 space-y-4">
-                    <!-- Phone --><a href="tel:+971568836143" class="inline-flex items-center justify-center gap-2 text-slate-600 font-medium hover:text-blue-600 transition-colors duration-300">
-                        <!-- Icon: Phone --><svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        +971 56 883 6143
-                    </a>
-                    <!-- Address --><div class="inline-flex items-center justify-center gap-2 text-slate-600 font-medium">
-                        <!-- Icon: Map Pin --><svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                       Dubai, United Arab Emirates
+                    <!-- Assignment Feedback -->
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <h3 class="text-xl font-semibold mb-3">Assignment Assistance</h3>
+                        <p class="text-slate-600">"Best assignment support. I received excellent grades."</p>
+                        <p class="mt-2 font-semibold text-blue-600">— Lawrence</p>
+                        <hr class="my-4">
+                        <p class="text-slate-600">"Well-structured assignment delivered on time with great quality."</p>
+                        <p class="mt-2 font-semibold text-blue-600">— Alice M</p>
+                        <p class="mt-4 text-amber-500 font-semibold">★★★★★</p>
                     </div>
                 </div>
             </div>
-            <!-- Book a Free Consultation -->
-<div class="max-w-4xl mx-auto mt-12 px-4 text-center">
-    <h3 class="text-3xl font-bold text-slate-900 mb-4">
-        📅 Book a Free Consultation
-    </h3>
+        </section>
 
-    <p class="text-slate-600 mb-6">
-        Select a date and time that works best for you.
-    </p>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Get in Touch</h2>
+                <p class="mt-4 text-base font-semibold text-slate-600">
+                    Ready to get started? Let's talk about your next project.
+                </p>
+                
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="mailto:anvesh.chelluboina@gmail.com" class="inline-flex items-center justify-center gap-2 bg-slate-100 border border-slate-200 px-6 py-3 rounded-lg shadow-sm text-slate-800 font-medium hover:bg-slate-200 transition duration-300">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        anvesh.chelluboina@gmail.com
+                    </a>
 
-    <div
-        class="calendly-inline-widget"
-        data-url="https://calendly.com/anvesh-chelluboina/book-30-min-free-session"
-        style="min-width:320px;height:700px;">
-    </div>
-</div>
+                    <a href="https://www.linkedin.com/in/anveshchelluboina/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-700 px-6 py-3 rounded-lg shadow-md text-white font-medium hover:bg-blue-800 transition duration-300">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.5 8h4V24h-4V8zm7 0h3.8v2.2h.1c.53-1 1.84-2.2 3.79-2.2 4.05 0 4.8 2.66 4.8 6.11V24h-4v-7.79c0-1.86-.03-4.26-2.6-4.26-2.6 0-3 2.03-3 4.12V24h-4V8z"/></svg>
+                        LinkedIn
+                    </a>
 
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <a href="https://wa.me/971568836143" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-600 px-6 py-3 rounded-lg shadow-md text-white font-medium hover:bg-green-700 transition duration-300">
+                        WhatsApp
+                    </a>
+                </div>
+
+                <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-6 text-slate-600 font-medium">
+                    <a href="tel:+971568836143" class="inline-flex items-center gap-2 hover:text-blue-600 transition">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        +971 56 883 6143
+                    </a>
+                    <div class="inline-flex items-center gap-2">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Dubai, United Arab Emirates
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendly Section -->
+            <div class="max-w-4xl mx-auto mt-16 px-4 text-center">
+                <h3 class="text-3xl font-bold text-slate-900 mb-4">
+                    📅 Book a Free Consultation
+                </h3>
+                <p class="text-slate-600 mb-6">
+                    Select a date and time that works best for you.
+                </p>
+                <div class="calendly-inline-widget"
+                     data-url="https://calendly.com/anvesh-chelluboina/book-30-min-free-session"
+                     style="min-width:320px;height:700px;">
+                </div>
+            </div>
+            <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </section>
     </main>
 
-    <!-- Footer --><footer class="bg-slate-800 text-slate-400 py-10">
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p>&copy; <span id="current-year"></span> Anvesh Chelluboina. All rights reserved.</p>
                 <p>Dubai, United Arab Emirates</p>
             </div>
@@ -333,10 +325,8 @@ WhatsApp
     </footer>
 
     <script>
-        // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 
 </body>
 </html>
-
