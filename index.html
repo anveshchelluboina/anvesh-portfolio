@@ -1,322 +1,96 @@
-
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anvesh Chelluboina - Professional Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #94a3b8;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #475569;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173b32">
+  <title>Anvesh Chelluboina — Engineering, Projects & Travel</title>
+  <meta name="description" content="The professional portfolio and travel journal of Anvesh Chelluboina — project coordination, engineering operations, CV support and thoughtful budget travel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="flapboard.css">
+  <script src="flapboard.js" defer></script>
 </head>
-<body class="bg-gray-100 text-slate-800">
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Anvesh Chelluboina home"><span class="brand-mark">AC</span><span>Anvesh Chelluboina<small>Projects · People · Places</small></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav">
+      <a href="#about">About</a><a href="#work">What I do</a><a href="#journal">Travel journal</a><a href="#contact" class="nav-cta">Say hello <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-    <!-- Header & Navigation -->
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-slate-200">
-        <nav class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div class="flex justify-between items-center h-20">
-               <!-- Centered Name -->
-    <div class="text-center">
-        <a href="#" class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight whitespace-nowrap">
-                        Anvesh Chelluboina
-                    </a>
-                </div>
-                
-                <!-- Navigation Links (Equally Spaced) -->
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
-                        <a href="#home" class="text-slate-900 hover:text-blue-900 font-semibold text-base transition-colors">Home</a>
-                        <a href="#about" class="text-slate-900 hover:text-blue-900 font-semibold text-base transition-colors">About</a>
-                        <a href="#services" class="text-slate-900 hover:text-blue-900 font-semibold text-base transition-colors">Services</a>
-                        <a href="#contact" class="text-slate-900 hover:text-blue-900 font-semibold text-base transition-colors">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Dubai, UAE · Open to meaningful opportunities</p>
+        <h1><span class="line"><span>Good work.</span></span><span class="line"><em>Curious journeys.</em></span></h1>
+        <p class="hero-intro">I’m Anvesh — an engineering and operations professional who enjoys bringing structure to complex work, helping people tell their stories, and finding the beauty in places beyond the usual route.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#work">Explore my work <span>↘</span></a><a class="text-link" href="slides.html">View profile slides <span>↗</span></a></div>
+        <div class="hero-facts"><div><strong data-count>12+</strong><span>years in engineering & operations</span></div><div><strong>MSc</strong><span>Project Management · Merit</span></div><div><strong data-count>24</strong><span>countries explored</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Travel photography collage">
+        <div class="hero-photo hero-photo-main"><img src="assets/photos/travel-39.jpg" alt="A mountain panorama from a travel journey" fetchpriority="high"></div>
+        <div class="hero-photo hero-photo-small"><img src="assets/photos/travel-12.jpg" alt="The Eiffel Tower on a city visit" loading="lazy"></div>
+        <div class="hero-note"><span class="note-star">✳</span><span>Stay curious.<br>Keep moving.</span></div>
+        <div class="hero-stamp">FIELD<br>NOTES<br><span>01 / 24</span></div>
+      </div>
+    </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="py-10 md:py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    
-                    <!-- Text Content (Left Column) -->
-                    <div class="lg:col-span-7 text-center md:text-left">
-                        <h2 class="mt-3 text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">
-                            CV Writer | Visa Consultant | Travel Planner
-                        </h2>
-                                
-                        <h1 class="mt-3 text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">
-                            Your Expert in Academics, Careers & Travel
-                        </h1>
-                        
-                        <p class="mt-4 text-base text-slate-600 leading-relaxed">
-                            I provide top-tier, personalized services for students and professionals. From AI-free academic assistance to expert CV writing and seamless visa applications, I'm here to help you succeed.
-                        </p>
+    <section class="ticker" aria-label="Areas of interest"><div class="ticker-track"><span>Engineering operations</span><i>✳</i><span>Project coordination</span><i>✳</i><span>People-first service</span><i>✳</i><span>Budget travel</span><i>✳</i><span>Engineering operations</span><i>✳</i><span>Project coordination</span><i>✳</i><span>People-first service</span><i>✳</i><span>Budget travel</span><i>✳</i></div></section>
 
-                        <ul class="mt-5 text-sm md:text-base text-slate-700 space-y-2">
-                            <li class="flex items-center justify-center md:justify-start gap-2">
-                                <span class="text-blue-600 font-bold">✔</span> 12+ Years Professional Experience
-                            </li>
-                            <li class="flex items-center justify-center md:justify-start gap-2">
-                                <span class="text-blue-600 font-bold">✔</span> MSc Project Management (Merit) – Arden University, UK
-                            </li>
-                            <li class="flex items-center justify-center md:justify-start gap-2">
-                                <span class="text-blue-600 font-bold">✔</span> CMI Level 7 Strategic Management
-                            </li>
-                            <li class="flex items-center justify-center md:justify-start gap-2">
-                                <span class="text-blue-600 font-bold">✔</span> UAE Based HVAC Professional
-                            </li>
-                            <li class="flex items-center justify-center md:justify-start gap-2">
-                                <span class="text-blue-600 font-bold">✔</span> Travelled to 24+ Countries
-                            </li>
-                        </ul>
+    <section class="section-wrap about-section" id="about">
+      <div class="section-label reveal"><span>01</span> A little about me</div>
+      <div class="about-grid"><div class="reveal" style="--i:1"><h2>Practical by nature.<br><em>Curious by choice.</em></h2></div><div class="about-copy reveal" style="--i:2"><p>I’ve built my career across engineering, service coordination and operations in India and the Gulf. I like solving the everyday problems that keep teams moving: aligning people, improving processes, communicating clearly and following through.</p><p>Alongside my professional work, I help people present their experience with confidence and plan travel that feels memorable without needing a big budget. This site brings those parts of my world together — work I’m proud of and places I’m grateful to have seen.</p><a class="text-link" href="slides.html">A quick visual introduction <span>↗</span></a></div></div>
+      <div class="credential-strip"><div class="reveal"><span class="mini-label">Education</span><strong>MSc Project Management</strong><small>Arden University, UK · Merit</small></div><div class="reveal" style="--i:1"><span class="mini-label">Professional focus</span><strong>Engineering & operations</strong><small>Service delivery · Process improvement</small></div><div class="reveal" style="--i:2"><span class="mini-label">Based in</span><strong>Dubai, United Arab Emirates</strong><small>Connected across regions</small></div></div>
+    </section>
 
-                        <!-- Action Buttons -->
-                        <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
-                            <a href="#services"
-                               class="bg-blue-600 text-white text-sm md:text-base font-medium px-5 py-2.5 rounded-lg shadow hover:bg-blue-700 transition duration-300">
-                                My Services
-                            </a>
+    <section class="work-section" id="work"><div class="section-wrap">
+      <div class="section-heading"><div class="reveal"><div class="section-label"><span>02</span> Where I can help</div><h2>Useful skills, <em>human approach.</em></h2></div><p class="reveal" style="--i:1">Whether it’s an operational challenge or a personal next step, I believe the best support is clear, thoughtful and practical.</p></div>
+      <div class="service-grid">
+        <article class="service-card service-featured reveal"><span class="card-index">01 / PROFESSIONAL</span><div class="service-icon">↗</div><h3>Engineering & operations</h3><p>Experience in engineering environments, service coordination and operational delivery — with a focus on reliable execution and continuous improvement.</p><ul><li>Project and maintenance coordination</li><li>HVAC / MEP and technical service operations</li><li>Process improvement and stakeholder communication</li></ul></article>
+        <article class="service-card reveal" style="--i:1"><span class="card-index">02 / CAREER</span><div class="service-icon">✳</div><h3>CV & profile support</h3><p>Helping professionals organise their experience into a clear, credible story for CVs, LinkedIn profiles and career conversations.</p><a href="#contact" class="card-link">Discuss your profile <span>↗</span></a></article>
+        <article class="service-card reveal" style="--i:2"><span class="card-index">03 / TRAVEL</span><div class="service-icon">⌁</div><h3>Visa & budget travel planning</h3><p>Practical document checklists, application preparation support and budget-conscious trip planning. Requirements and decisions remain with the relevant authorities.</p><a href="#journal" class="card-link">Explore the travel journal <span>↗</span></a></article>
+      </div>
+    </div></section>
 
-                            <a href="https://wa.me/971568836143"
-                               target="_blank"
-                               class="bg-green-600 text-white text-sm md:text-base font-medium px-5 py-2.5 rounded-lg shadow hover:bg-green-700 transition duration-300">
-                                WhatsApp Me
-                            </a>
+    <section class="journal-section section-wrap" id="journal">
+      <div class="journal-top"><div class="reveal"><div class="section-label"><span>03</span> The travel journal</div><h2>Small moments.<br><em>Big world.</em></h2></div><div class="journal-intro reveal" style="--i:1"><p>Travel, for me, is about being present — a new street, a long train ride, mountain air, a conversation with someone I’ve just met. Here are a few moments from the road.</p><span class="photo-count"><b data-count>43</b> photographs · personal travel archive</span></div></div>
+      <div class="gallery-controls reveal" role="group" aria-label="Filter travel photos">
+        <button class="filter-chip is-active" data-filter="all" aria-pressed="true">All moments <span>43</span></button>
+        <button class="filter-chip" data-filter="mountains" aria-pressed="false">Nature & mountains</button>
+        <button class="filter-chip" data-filter="cities" aria-pressed="false">Cities & architecture</button>
+        <button class="filter-chip" data-filter="culture" aria-pressed="false">Places & culture</button>
+        <button class="filter-chip" data-filter="ontheroad" aria-pressed="false">On the road</button>
+      </div>
+      <div class="photo-grid reveal-group" id="photo-grid" aria-live="polite"></div>
+      <div class="gallery-bottom"><span>One photograph at a time — tap any image to take a closer look.</span><button class="text-link" id="show-more" type="button">Show more photos <span>↓</span></button></div>
+    </section>
 
-                            <a href="#contact"
-                               class="bg-indigo-600 text-white text-sm md:text-base font-medium px-5 py-2.5 rounded-lg shadow hover:bg-indigo-700 transition duration-300">
-                                📅 Book a Free Call
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Resized & Fitted Photo (Right Column) -->
-                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
-                        <img src="Anvesh.PNG"
-                             alt="Anvesh Chelluboina"
-                             class="w-full max-w-[320px] h-auto rounded-2xl shadow-xl object-cover border border-slate-100">
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-14 md:py-20 bg-gray-50">
-            <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-slate-900">About Me</h2>
-                    <p class="mt-3 text-base font-semibold text-slate-600">A little bit about my mission and approach.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-md md:col-span-1">
-                        <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                            I'm Anvesh Chelluboina, a UAE-based professional with over 12 years of experience in facilities management, career support, travel planning and visa assistance. I hold an MSc in Project Management with Merit from Arden University and a CMI Level 7 Diploma in Strategic Management and Leadership Practice.
-                        </p>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-md md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <h3 class="text-xl font-semibold text-slate-900">My Vision</h3>
-                            <p class="mt-3 text-slate-600 leading-relaxed text-sm md:text-base">
-                                To be the most trusted partner for students and professionals seeking to overcome academic, career, and travel hurdles, enabling them to achieve their ambitions with confidence.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-slate-900">My Mission</h3>
-                            <p class="mt-3 text-slate-600 leading-relaxed text-sm md:text-base">
-                                To deliver exceptional, high-quality freelance services from AI-free, plagiarism-free assignments and optimized career documents to meticulous travel and visa planning tailored to each client.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-slate-900">My Services</h2>
-                    <p class="mt-3 text-base font-semibold text-slate-600">How I can help you succeed.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="flex flex-col bg-gray-50 border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-                        <div class="flex-shrink-0">
-                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                        </div>
-                        <div class="mt-4 flex-grow">
-                            <h3 class="text-lg font-semibold text-slate-900">CV Writing & LinkedIn</h3>
-                            <p class="mt-2 text-sm text-slate-600">
-                                Crafting professional CVs tailored for the UAE and global markets. I optimize your LinkedIn to attract recruiters.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col bg-gray-50 border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-                        <div class="flex-shrink-0">
-                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4.5 21 3c-1.5-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 5.2 5.2c.4.4 1 .5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>
-                        </div>
-                        <div class="mt-4 flex-grow">
-                            <h3 class="text-lg font-semibold text-slate-900">Visa Assistance</h3>
-                            <p class="mt-2 text-sm text-slate-600">
-                                Full support for Schengen, Canada, UK, and other visas. From compelling cover letters to flawless submissions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col bg-gray-50 border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-                        <div class="flex-shrink-0">
-                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                        </div>
-                        <div class="mt-4 flex-grow">
-                            <h3 class="text-lg font-semibold text-slate-900">Budget Travel Plans</h3>
-                            <p class="mt-2 text-sm text-slate-600">
-                                Expert travel guiding and custom-built budget travel plans that maximize your experience without breaking the bank.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col bg-gray-50 border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-                        <div class="flex-shrink-0">
-                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-                        </div>
-                        <div class="mt-4 flex-grow">
-                            <h3 class="text-lg font-semibold text-slate-900">Academic Assistance</h3>
-                            <p class="mt-2 text-sm text-slate-600">
-                                Plagiarism-free and AI-free support for university students. Ensuring high-quality work and excellent results.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="py-16 bg-gray-50">
-            <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <h2 class="text-3xl font-bold text-center mb-12">Client Feedback</h2>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-xl shadow-sm">
-                        <h3 class="text-lg font-semibold mb-2">CV Preparation</h3>
-                        <p class="text-slate-600 text-sm">"Excellent CV preparation and professional guidance."</p>
-                        <p class="mt-2 font-semibold text-blue-600 text-sm">— Jesmitha Kumari</p>
-                        <hr class="my-3">
-                        <p class="text-slate-600 text-sm">"Highly professional CV that helped improve my job applications."</p>
-                        <p class="mt-2 font-semibold text-blue-600 text-sm">— Kiran Tadipalli</p>
-                        <p class="mt-3 text-amber-500 font-semibold">★★★★★</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm">
-                        <h3 class="text-lg font-semibold mb-2">Visa Assistance</h3>
-                        <p class="text-slate-600 text-sm">"Very helpful with visa documentation and cover letters."</p>
-                        <p class="mt-2 font-semibold text-blue-600 text-sm">— Khurram Ali</p>
-                        <hr class="my-3">
-                        <p class="text-slate-600 text-sm">"Professional guidance throughout my visa application process."</p>
-                        <p class="mt-2 font-semibold text-blue-600 text-sm">— Abid Hassan</p>
-                        <p class="mt-3 text-amber-500 font-semibold">★★★★★</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-sm">
-                        <h3 class="text-lg font-semibold mb-2">Assignment Assistance</h3>
-                        <p class="text-slate-600 text-sm">"Best assignment support. I received excellent grades."</p>
-                        <p class="mt-2 font-semibold text-blue-600 text-sm">— Lawrence</p>
-                        <hr class="my-3">
-                        <p class="text-slate-600 text-sm">"Well-structured assignment delivered on time with great quality."</p>
-                        <p class="mt-2 font-semibold text-blue-600 text-sm">— Alice M</p>
-                        <p class="mt-3 text-amber-500 font-semibold">★★★★★</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 bg-white">
-            <div class="max-w-3xl mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-900">Get in Touch</h2>
-                <p class="mt-3 text-base font-semibold text-slate-600">
-                    Ready to get started? Let's talk about your next project.
-                </p>
-                
-                <div class="mt-8 flex flex-wrap justify-center gap-4">
-                    <a href="mailto:anvesh.chelluboina@gmail.com" class="inline-flex items-center gap-2 bg-slate-100 border border-slate-200 px-5 py-2.5 rounded-lg shadow-sm text-slate-800 font-medium hover:bg-slate-200 transition">
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        anvesh.chelluboina@gmail.com
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/anveshchelluboina/" target="_blank" class="inline-flex items-center gap-2 bg-blue-700 px-5 py-2.5 rounded-lg shadow-sm text-white font-medium hover:bg-blue-800 transition">
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.5 8h4V24h-4V8zm7 0h3.8v2.2h.1c.53-1 1.84-2.2 3.79-2.2 4.05 0 4.8 2.66 4.8 6.11V24h-4v-7.79c0-1.86-.03-4.26-2.6-4.26-2.6 0-3 2.03-3 4.12V24h-4V8z"/></svg>
-                        LinkedIn
-                    </a>
-
-                    <a href="https://wa.me/971568836143" target="_blank" class="inline-flex items-center gap-2 bg-green-600 px-5 py-2.5 rounded-lg shadow-sm text-white font-medium hover:bg-green-700 transition">
-                        WhatsApp
-                    </a>
-                </div>
-
-                <div class="mt-6 flex flex-col sm:flex-row justify-center items-center gap-6 text-slate-600 font-medium text-sm">
-                    <a href="tel:+971568836143" class="inline-flex items-center gap-2 hover:text-blue-600 transition">
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        +971 56 883 6143
-                    </a>
-                    <div class="inline-flex items-center gap-2">
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        Dubai, United Arab Emirates
-                    </div>
-                </div>
-            </div>
-
-            <!-- Calendly Section -->
-            <div class="max-w-4xl mx-auto mt-12 px-4 text-center">
-                <h3 class="text-2xl font-bold text-slate-900 mb-2">
-                    📅 Book a Free Consultation
-                </h3>
-                <p class="text-slate-600 mb-6 text-sm">
-                    Select a date and time that works best for you.
-                </p>
-                <div class="calendly-inline-widget"
-                     data-url="https://calendly.com/anvesh-chelluboina/book-30-min-free-session"
-                     style="min-width:320px;height:650px;">
-                </div>
-            </div>
-            <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-800 text-slate-400 py-6">
-        <div class="max-w-6xl mx-auto px-6 text-center text-sm">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
-                <p>&copy; <span id="current-year"></span> Anvesh Chelluboina. All rights reserved.</p>
-                <p>Dubai, United Arab Emirates</p>
-            </div>
+    <section class="contact-section" id="contact"><div class="section-wrap contact-grid"><div class="reveal"><div class="section-label"><span>04</span> Let’s connect</div><h2>Have a project<br>or a plan in mind?</h2><p>I’m always happy to connect with thoughtful people, exchange ideas or talk through a practical next step.</p></div><div class="contact-card reveal" style="--i:1"><span class="mini-label">Best way to reach me</span><a class="contact-email" href="mailto:saianveshmech@gmail.com">saianveshmech@gmail.com <span>↗</span></a><div class="contact-links"><a href="https://www.linkedin.com/in/anveshchelluboina/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a><a href="slides.html">Profile slides <span>↗</span></a></div><p class="small-note">Dubai, United Arab Emirates</p></div></div>
+      <div class="section-wrap booking-wrap" id="book">
+        <div class="booking-head reveal">
+          <div><span class="mini-label">Free 30-minute session</span><h3>Rather talk it through?<br><em>Book a call.</em></h3></div>
+          <p>Pick a day and time that suits you, and the invite lands straight in your calendar.</p>
         </div>
-    </footer>
+        <div class="booking reveal" style="--i:1">
+          <div class="calendly-inline-widget" data-url="https://calendly.com/anvesh-chelluboina/book-30-min-free-session?hide_gdpr_banner=1&amp;background_color=fffefa&amp;text_color=1c2924&amp;primary_color=245447"></div>
+          <div class="booking-fallback">
+            <p>Loading the booking calendar…</p>
+            <a class="button button-dark" href="https://calendly.com/anvesh-chelluboina/book-30-min-free-session" target="_blank" rel="noopener">Open the booking page <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-mark">AC</span><span>Anvesh Chelluboina<small>Made with curiosity, in Dubai.</small></span></a><span>© <span id="year"></span> Anvesh Chelluboina</span><a href="#top" class="back-top">Back to top ↑</a></footer>
 
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
-
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Travel photograph viewer">
+    <button class="lightbox-close" type="button" aria-label="Close photo viewer">×</button><button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous photo">←</button>
+    <figure><img id="lightbox-image" alt=""><figcaption><span id="lightbox-caption"></span><span id="lightbox-counter"></span></figcaption></figure>
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photo">→</button>
+  </div>
 </body>
 </html>
