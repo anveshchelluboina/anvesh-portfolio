@@ -155,3 +155,86 @@ h1{font-size:clamp(58px,7vw,92px)}
 }
 .portfolio-qr{display:flex;align-items:center;gap:16px;margin-top:24px;padding:12px;border:1px solid rgba(255,255,255,.2);transition:border-color .2s,transform .2s}.portfolio-qr:hover{border-color:#d4b783;transform:translateY(-2px)}.portfolio-qr img{width:92px;height:92px;background:#fff;padding:5px;image-rendering:pixelated}.portfolio-qr strong,.portfolio-qr small{display:block}.portfolio-qr strong{font-family:var(--serif);font-size:16px;font-weight:500}.portfolio-qr small{margin-top:4px;color:#c7d0c8;font-size:10px}
 .contact-whatsapp{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:#d4b783;font-size:12px}.contact-whatsapp:hover{text-decoration:underline}.contact-whatsapp .whatsapp-icon{width:16px;height:16px;fill:currentColor;flex:none}.contact-whatsapp span{transition:transform .2s}.contact-whatsapp:hover span{transform:translate(2px,-2px)}
+
+/* Professional focus, additional services and client feedback */
+.experience-section{padding-top:74px;padding-bottom:78px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.experience-heading{display:grid;grid-template-columns:.7fr 1.3fr;align-items:end;gap:35px}
+.experience-heading .section-label{align-self:start}
+.experience-heading h2,.academic-grid h2,.reviews-heading h2{margin:0;font:500 clamp(38px,4.7vw,58px)/1.08 var(--serif)}
+.experience-heading h2 em,.academic-grid h2 em,.reviews-heading h2 em{color:var(--green-2)}
+.experience-copy{max-width:760px;margin:27px 0 0 auto;color:var(--muted);font-size:14px;line-height:1.85}
+.experience-skills{display:flex;flex-wrap:wrap;gap:9px;margin:27px 0 0 auto;max-width:760px}
+.experience-skills span{padding:7px 11px;border:1px solid var(--line);font-size:11px;color:var(--green)}
+.service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.service-card{min-width:0}
+.academic-section{padding:92px 0;background:var(--paper-deep)}
+.academic-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+.academic-grid h2{max-width:450px}
+.academic-copy{max-width:650px;color:#4f5c54;font-size:13px;line-height:1.85}
+.academic-copy p{margin:0 0 16px}
+.academic-copy .academic-intro{font:500 19px/1.55 var(--serif);color:var(--ink)}
+.academic-copy ul{padding-left:19px;margin:18px 0 26px}
+.academic-copy li{padding:3px 0 3px 4px}
+.reviews-section{padding-top:90px;padding-bottom:95px}
+.reviews-heading{display:grid;grid-template-columns:1fr .75fr;gap:55px;align-items:end}
+.reviews-heading h2{font-size:clamp(38px,4.7vw,58px)}
+.reviews-heading>p{max-width:450px;margin:0 0 5px;color:var(--muted);font-size:13px;line-height:1.9}
+.review-list{margin:34px 0 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reviews-empty{margin:0;padding:22px 0;color:var(--muted);font:500 18px/1.5 var(--serif)}
+.review-open{margin-top:8px}
+.review-card{padding:22px 0;border-bottom:1px solid var(--line)}
+.review-card:last-child{border-bottom:0}
+.review-card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;color:var(--muted);font-size:11px}
+.review-card-head strong{color:var(--ink);font:500 17px var(--serif)}
+.review-card-rating{color:#9b733d;letter-spacing:.08em}
+.review-card blockquote{margin:10px 0 0;color:#47554d;font-size:13px;line-height:1.8;white-space:pre-wrap}
+.review-dialog{width:min(620px,calc(100% - 28px));max-height:min(88vh,900px);padding:0;border:1px solid #d7d9cf;background:var(--paper);color:var(--ink);box-shadow:0 25px 90px rgba(8,24,17,.35)}
+.review-dialog::backdrop{background:rgba(11,22,17,.72)}
+.review-dialog[open]{animation:rise .25s var(--ease)}
+.review-dialog-head{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:start;gap:18px;padding:23px 25px 16px;background:var(--paper);border-bottom:1px solid var(--line)}
+.review-dialog-head h2{margin:7px 0 0;font:500 30px/1.15 var(--serif)}
+.icon-button{width:38px;height:38px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:24px;line-height:1;cursor:pointer}
+.review-privacy{margin:18px 25px;color:var(--muted);font-size:12px;line-height:1.7}
+.review-dialog form{display:grid;gap:9px;padding:0 25px 25px}
+.review-dialog form>label:not(.consent-label):not(.review-honeypot){margin-top:8px;font-size:12px;font-weight:700}
+.review-dialog form>label>span,.review-dialog form>label>small,.rating-field legend small{margin-left:7px;color:var(--muted);font-size:10px;font-weight:400}
+.review-dialog input:not([type=radio]):not([type=checkbox]),.review-dialog select,.review-dialog textarea{width:100%;min-height:43px;padding:10px 11px;border:1px solid #bfc8be;border-radius:2px;background:var(--white);color:var(--ink);font:inherit;font-size:13px}
+.review-dialog textarea{min-height:125px;resize:vertical}
+.review-field-note{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:10px}
+.rating-field{margin:10px 0 2px;padding:0;border:0}
+.rating-field legend{margin-bottom:8px;font-size:12px;font-weight:700}
+.rating-options{display:flex;gap:5px}
+.rating-options label{position:relative;display:grid;place-items:center;min-width:40px;min-height:38px;border:1px solid var(--line);color:#9b733d;cursor:pointer}
+.rating-options input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.rating-options label:has(input:checked){background:#eee8dc;border-color:#9b733d}
+.rating-options label:focus-within{outline:3px solid #27785b;outline-offset:2px}
+.consent-label{display:flex;align-items:flex-start;gap:10px;margin:8px 0;font-size:11px;line-height:1.6}
+.consent-label input{margin-top:3px;accent-color:var(--green)}
+.consent-label strong{display:block;margin-top:4px;color:var(--muted);font-size:10px}
+.review-honeypot{position:absolute!important;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.review-form-status{padding:11px 13px;border-left:3px solid var(--brass);background:#efede5;color:#48564e;font-size:11px;line-height:1.6}
+.review-form-status[data-state=error]{border-color:#a63c31}
+.review-form-status[data-state=success]{border-color:#26704d}
+.review-form-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.review-form-actions button:disabled{opacity:.55;cursor:not-allowed}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #2a795b;outline-offset:3px}
+@media(max-width:900px){.experience-heading{grid-template-columns:1fr;gap:0}.experience-heading .section-label{margin-bottom:18px}.academic-grid{grid-template-columns:1fr;gap:28px}.reviews-heading{grid-template-columns:1fr;gap:20px}}
+@media(max-width:640px){.experience-section{padding-top:58px;padding-bottom:60px}.experience-heading h2,.academic-grid h2,.reviews-heading h2{font-size:39px}.experience-copy,.experience-skills{margin-left:0}.academic-section{padding:66px 0}.academic-copy .academic-intro{font-size:17px}.reviews-section{padding-top:66px;padding-bottom:70px}.review-dialog-head{padding:18px 18px 13px}.review-privacy{margin:15px 18px}.review-dialog form{padding:0 18px 20px}.review-dialog-head h2{font-size:26px}.service-card h3{font-size:24px}}
+
+@media(max-width:1080px){
+  .menu-toggle{display:flex;position:relative;z-index:2}
+  .main-nav{position:absolute;top:100%;right:22px;left:auto;width:min(390px,calc(100vw - 44px));max-height:calc(100vh - 90px);overflow:auto;padding:18px 22px;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:stretch;gap:14px;visibility:hidden;opacity:0;transform:translateY(-10px);transition:opacity .2s,transform .2s,visibility 0s linear .2s}
+  .main-nav.is-open{visibility:visible;opacity:1;transform:none;transition:opacity .2s,transform .2s,visibility 0s}
+  .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .service-featured{grid-column:1/-1}
+}
+@media(max-width:640px){
+  .main-nav{left:0;right:0;width:auto;max-height:calc(100vh - 72px);border-left:0;border-right:0}
+  .service-grid{grid-template-columns:1fr}
+  .service-featured{grid-column:auto}
+}
+.deck-shell:fullscreen{display:flex;flex-direction:column;width:100%;height:100%;min-height:100%;margin:0;padding:18px 4vw 12px;background:var(--paper)}
+.deck-shell:fullscreen .slide-deck{flex:1;min-height:0}
+.deck-shell:fullscreen .profile-slide{height:100%;min-height:0}
+@media(prefers-reduced-motion:reduce){.deck-shell:fullscreen .profile-slide{transition:none}}

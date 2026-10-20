@@ -27,13 +27,14 @@
     const nav = $("#main-nav");
     if (!toggle || !nav) return;
     toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
+        const open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
     });
     $$("a", nav).forEach(link => link.addEventListener("click", () => {
       nav.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation");
     }));
   }
 
@@ -137,6 +138,7 @@
     let visibleCount = batchSize;
     let activePhotoIndex = 0;
     let lastFocus = null;
+    let previousOverflow = "";
     const lightbox = $("#lightbox");
     const lightboxImage = $("#lightbox-image");
     const lightboxCaption = $("#lightbox-caption");
@@ -151,6 +153,7 @@
       const start = append ? grid.children.length : 0;
       if (!append) grid.replaceChildren();
       filtered.slice(start, visibleCount).forEach(({p, i}, n) => {
+        const filteredIndex = start + n;
         const button = document.createElement("button");
         button.type = "button";
         button.className = "photo-card";
@@ -161,7 +164,7 @@
         const loaded = () => img.classList.add("is-loaded");
         if (img.complete) loaded();
         else { img.addEventListener("load", loaded, {once:true}); img.addEventListener("error", loaded, {once:true}); }
-        button.addEventListener("click", () => openLightbox(i));
+        button.addEventListener("click", () => openLightbox(filteredIndex));
         grid.appendChild(button);
       });
       showMore.disabled = visibleCount >= filtered.length;
@@ -174,25 +177,29 @@
       updateLightbox();
       lightbox.classList.add("is-open");
       lightbox.setAttribute("aria-hidden", "false");
+      previousOverflow = document.body.style.overflow;
       document.body.style.overflow = "hidden";
       $(".lightbox-close", lightbox).focus();
     }
     function closeLightbox() {
       lightbox.classList.remove("is-open");
       lightbox.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-      if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+      document.body.style.overflow = previousOverflow;
+      if (lastFocus && lastFocus.isConnected && typeof lastFocus.focus === "function") lastFocus.focus();
     }
     function updateLightbox(step = 0) {
-      const p = photoData[activePhotoIndex];
+      const current = filteredPhotos()[activePhotoIndex];
+      if (!current) return;
+      const p = current.p;
       lightboxImage.style.setProperty("--dir", String(Math.sign(step)));
       lightboxImage.src = `assets/photos/${p[0]}`;
       lightboxImage.alt = p[1];
       lightboxCaption.textContent = p[1];
-      lightboxCounter.textContent = `${String(activePhotoIndex + 1).padStart(2, "0")} / ${photoData.length}`;
+      lightboxCounter.textContent = `${String(activePhotoIndex + 1).padStart(2, "0")} / ${filteredPhotos().length}`;
     }
     function moveLightbox(step) {
-      activePhotoIndex = (activePhotoIndex + step + photoData.length) % photoData.length;
+      const count = filteredPhotos().length;
+      activePhotoIndex = (activePhotoIndex + step + count) % count;
       updateLightbox(step);
     }
     // Restart the slide-in each time a new photo has loaded
@@ -216,11 +223,27 @@
     $(".lightbox-prev").addEventListener("click", () => moveLightbox(-1));
     $(".lightbox-next").addEventListener("click", () => moveLightbox(1));
     lightbox.addEventListener("click", event => { if (event.target === lightbox) closeLightbox(); });
+    let touchStartX = null;
+    lightbox.addEventListener("touchstart", event => { touchStartX = event.changedTouches[0].clientX; }, {passive:true});
+    lightbox.addEventListener("touchend", event => {
+      if (touchStartX === null) return;
+      const delta = event.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) > 55) moveLightbox(delta < 0 ? 1 : -1);
+      touchStartX = null;
+    }, {passive:true});
     document.addEventListener("keydown", event => {
       if (!lightbox.classList.contains("is-open")) return;
       if (event.key === "Escape") closeLightbox();
       if (event.key === "ArrowLeft") moveLightbox(-1);
       if (event.key === "ArrowRight") moveLightbox(1);
+      if (event.key === "Tab") {
+        const focusable = $$("button:not([disabled]), [href], [tabindex]:not([tabindex='-1'])", lightbox);
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
     });
     render();
   }
@@ -233,6 +256,8 @@
     const counter = $("#slide-number");
     const prev = $("#prev-slide");
     const next = $("#next-slide");
+    const fullscreenButton = $("#fullscreen-slide");
+    const shell = deck.closest(".deck-shell");
     let current = 0;
     slides.forEach((slide, index) => {
       const dot = document.createElement("button");
@@ -262,6 +287,27 @@
     }
     prev.addEventListener("click", () => show(current - 1));
     next.addEventListener("click", () => show(current + 1));
+    if (fullscreenButton) {
+      if (!shell || typeof shell.requestFullscreen !== "function") {
+        fullscreenButton.hidden = true;
+      } else {
+        const updateFullscreenButton = () => {
+          const active = document.fullscreenElement === shell;
+          fullscreenButton.setAttribute("aria-label", active ? "Exit fullscreen" : "Enter fullscreen");
+          fullscreenButton.setAttribute("aria-pressed", String(active));
+        };
+        fullscreenButton.addEventListener("click", async () => {
+          try {
+            if (document.fullscreenElement === shell) await document.exitFullscreen();
+            else await shell.requestFullscreen();
+          } catch {
+            fullscreenButton.focus();
+          }
+        });
+        document.addEventListener("fullscreenchange", updateFullscreenButton);
+        updateFullscreenButton();
+      }
+    }
     deck.addEventListener("keydown", event => {
       if (event.key === "ArrowRight" || event.key === "PageDown") { event.preventDefault(); show(current + 1); }
       if (event.key === "ArrowLeft" || event.key === "PageUp") { event.preventDefault(); show(current - 1); }
@@ -279,6 +325,154 @@
     show(0);
   }
 
+  function initReviewForm() {
+    const dialog = $("#review-dialog");
+    const form = $("#review-form");
+    const openButton = $("#open-review-form");
+    const closeButton = $("#close-review-form");
+    const submitButton = $("#submit-review");
+    const retryButton = $("#retry-review");
+    const status = $("#review-form-status");
+    const reviewList = $("#review-list");
+    if (!dialog || !form || !openButton || !closeButton || !submitButton || !status || !reviewList) return;
+
+    // Add reviews here only after manually approving them. Do not mark a client verified without verification.
+    const approvedReviews = [];
+    function renderReviews() {
+      reviewList.replaceChildren();
+      if (!approvedReviews.length) {
+        const empty = document.createElement("p");
+        empty.className = "reviews-empty";
+        empty.textContent = "Be the first to share your experience.";
+        reviewList.appendChild(empty);
+        return;
+      }
+      approvedReviews.forEach(review => {
+        const article = document.createElement("article");
+        article.className = "review-card";
+        const heading = document.createElement("div");
+        heading.className = "review-card-head";
+        const name = document.createElement("strong");
+        name.textContent = review.name;
+        const service = document.createElement("span");
+        service.textContent = review.service;
+        heading.append(name, service);
+        if (Number.isInteger(review.rating) && review.rating >= 1 && review.rating <= 5) {
+          const rating = document.createElement("span");
+          rating.className = "review-card-rating";
+          rating.setAttribute("aria-label", `${review.rating} out of 5 stars`);
+          rating.textContent = "★".repeat(review.rating);
+          heading.appendChild(rating);
+        }
+        if (review.date) {
+          const date = document.createElement("time");
+          date.textContent = review.date;
+          heading.appendChild(date);
+        }
+        if (review.verified === true) {
+          const verified = document.createElement("span");
+          verified.textContent = "Verified client";
+          heading.appendChild(verified);
+        }
+        const quote = document.createElement("blockquote");
+        quote.textContent = review.text;
+        article.append(heading, quote);
+        reviewList.appendChild(article);
+      });
+    }
+
+    function configuredEndpoint() {
+      try {
+        const endpoint = new URL(form.dataset.reviewEndpoint || "");
+        const validHost = endpoint.hostname === "formspree.io" || endpoint.hostname.endsWith(".formspree.io");
+        return endpoint.protocol === "https:" && validHost && /^\/f\/[^/]+\/?$/.test(endpoint.pathname) ? endpoint.href : "";
+      } catch {
+        return "";
+      }
+    }
+
+    const endpoint = configuredEndpoint();
+    submitButton.disabled = !endpoint;
+    status.textContent = endpoint
+      ? "Submissions are sent for manual review. A review will only appear publicly after approval."
+      : "Review submission is not configured yet, so this form cannot send or store reviews.";
+    status.dataset.state = endpoint ? "ready" : "unconfigured";
+    const dateInput = $("#review-date", form);
+    if (dateInput) {
+      const localToday = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+      dateInput.max = localToday;
+    }
+    const reviewText = form.elements.namedItem("review");
+    const characterCount = $("#review-character-count");
+    $$(".filter-chip").forEach(button => {
+      const count = button.querySelector("[data-filter-count]");
+      if (count) {
+        const filter = button.dataset.filter;
+        count.textContent = String(filter === "all" ? photoData.length : photoData.filter(photo => photo[2] === filter).length);
+      }
+    });
+    if (reviewText && characterCount) {
+      reviewText.addEventListener("input", () => {
+        characterCount.textContent = `${reviewText.value.length} / 1,200`;
+        reviewText.setCustomValidity("");
+      });
+    }
+
+    renderReviews();
+    openButton.addEventListener("click", () => {
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+        $("#review-name", form).focus();
+      }
+    });
+    closeButton.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); });
+    if (retryButton) retryButton.addEventListener("click", () => form.requestSubmit());
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      const nameInput = form.elements.namedItem("name");
+      nameInput.setCustomValidity(nameInput.value.trim() ? "" : "Enter a name or display name.");
+      reviewText.setCustomValidity(reviewText.value.trim().length >= 20 ? "" : "Please write at least 20 characters.");
+      if (!form.reportValidity()) {
+        status.textContent = "Please correct the highlighted fields before submitting.";
+        status.dataset.state = "error";
+        return;
+      }
+      if (!endpoint) {
+        status.textContent = "Submission is unavailable until the site owner configures the review service. Your review was not sent.";
+        status.dataset.state = "error";
+        return;
+      }
+      if (form.elements.namedItem("_gotcha").value) return;
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting…";
+      if (retryButton) retryButton.hidden = true;
+      status.textContent = "Sending your review securely…";
+      status.dataset.state = "pending";
+      try {
+        const response = await fetch(endpoint, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+        if (!response.ok) throw new Error(`Review service returned ${response.status}`);
+        status.textContent = "Your review was received and is pending moderation. It will not appear publicly unless approved.";
+        status.dataset.state = "success";
+        form.reset();
+        if (characterCount) characterCount.textContent = "0 / 1,200";
+      } catch {
+        status.textContent = "We could not confirm that your review was received. It was not marked as submitted; please retry.";
+        status.dataset.state = "error";
+        if (retryButton) retryButton.hidden = false;
+      } finally {
+        submitButton.disabled = !endpoint;
+        submitButton.textContent = "Submit for review";
+      }
+    });
+  }
+
   function init() {
     initMobileMenu();
     initHeader();
@@ -287,6 +481,7 @@
     initTicker();
     initGallery();
     initSlides();
+    initReviewForm();
     initBooking();
     const year = $("#year");
     if (year) year.textContent = new Date().getFullYear();
