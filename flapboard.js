@@ -337,7 +337,14 @@
     if (!dialog || !form || !openButton || !closeButton || !submitButton || !status || !reviewList) return;
 
     // Add reviews here only after manually approving them. Do not mark a client verified without verification.
-    const approvedReviews = [];
+    const approvedReviews = [
+      { name: "Jesmitha Kumari", service: "CV Preparation", text: "Excellent CV preparation and professional guidance.", rating: 5 },
+      { name: "Kiran Tadipalli", service: "CV Preparation", text: "Highly professional CV that helped improve my job applications.", rating: 5 },
+      { name: "Khurram Ali", service: "Visa Assistance", text: "Very helpful with visa documentation and cover letters.", rating: 5 },
+      { name: "Abid Hassan", service: "Visa Assistance", text: "Professional guidance throughout my visa application process.", rating: 5 },
+      { name: "Lawrence", service: "Assignment Assistance", text: "Best assignment support. I received excellent grades.", rating: 5 },
+      { name: "Alice M", service: "Assignment Assistance", text: "Well-structured assignment delivered on time with great quality.", rating: 5 }
+    ];
     function renderReviews() {
       reviewList.replaceChildren();
       if (!approvedReviews.length) {
@@ -422,7 +429,7 @@
     openButton.addEventListener("click", () => {
       if (typeof dialog.showModal === "function") {
         dialog.showModal();
-        $("#review-name", form).focus();
+        $("#review-service", form).focus();
       }
     });
     closeButton.addEventListener("click", () => dialog.close());

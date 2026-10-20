@@ -238,3 +238,22 @@ h1{font-size:clamp(58px,7vw,92px)}
 .deck-shell:fullscreen .slide-deck{flex:1;min-height:0}
 .deck-shell:fullscreen .profile-slide{height:100%;min-height:0}
 @media(prefers-reduced-motion:reduce){.deck-shell:fullscreen .profile-slide{transition:none}}
+
+/* Keep supporting text and controls comfortably readable across the site. */
+body{font-size:17px}
+.hero-intro,.about-copy,.section-heading>p,.service-card p,.service-card ul,.academic-copy,.reviews-heading>p,.contact-section p,.booking-head p,.booking-fallback p{font-size:16px}
+.brand,.main-nav,.button,.text-link,.card-link,.contact-links,.mini-label,.card-index,.photo-count,.filter-chip,.gallery-bottom,.site-footer,.slides-footer,.deck-topline,.deck-hint{font-size:14px}
+.brand small,.credential-strip small,.photo-card-caption,.slide-contact-links,.slide-stat-row span,.slide-pill-grid small,.education-card span,.education-card small{font-size:13px}
+.hero-facts span{font-size:14px}
+.photo-card-caption small{font-size:12px}
+.footer-brand{font-size:14px}
+.footer-brand small{font-size:12px}
+.contact-whatsapp{font-size:15px}
+.portfolio-qr strong{font-size:18px}
+.portfolio-qr small{font-size:13px}
+.review-card-head{font-size:14px}
+.review-card-head strong{font-size:20px}
+.review-card blockquote{font-size:16px}
+.review-privacy,.review-dialog form>label:not(.consent-label):not(.review-honeypot),.rating-field legend,.review-dialog input:not([type=radio]):not([type=checkbox]),.review-dialog select,.review-dialog textarea{font-size:16px}
+.review-dialog form>label>span,.review-dialog form>label>small,.rating-field legend small,.review-field-note,.consent-label,.review-form-status{font-size:14px}
+@media(max-width:640px){.brand{font-size:14px}.brand small{font-size:12px}.hero-intro,.about-copy,.section-heading>p,.service-card p,.service-card ul,.academic-copy,.reviews-heading>p,.contact-section p,.booking-head p,.booking-fallback p{font-size:16px}.hero-facts span{font-size:12px}.photo-card-caption{font-size:13px}.photo-card-caption small{font-size:11px}.review-card-head{font-size:13px}.review-card blockquote{font-size:15px}}

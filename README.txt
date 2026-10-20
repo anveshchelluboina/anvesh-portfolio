@@ -7,7 +7,7 @@
 - `flapboard.js` contains the gallery, lightbox, mobile navigation, slides, and review form behavior.
 - `assets/photos/` contains the original portfolio and travel photographs.
 
-The site is static and compatible with GitHub Pages. There is no server or review database in this repository. No authentic client testimonials were present in the project files or accessible repository history, so the public reviews section starts empty.
+The site is static and compatible with GitHub Pages. There is no server or review database in this repository. The six testimonials currently displayed were supplied by the site owner; no dates or verified-client claims are shown. New review submissions remain disabled until a receiving endpoint is configured.
 
 ## Preview locally
 From the project directory, run:
