@@ -91,7 +91,7 @@
     <dialog class="review-dialog" id="review-dialog" aria-labelledby="review-form-title">
       <div class="review-dialog-head"><div><span class="mini-label">Client feedback</span><h2 id="review-form-title">Write a review</h2></div><button class="icon-button" type="button" id="close-review-form" aria-label="Close review form">×</button></div>
       <p class="review-privacy">Reviews should describe a genuine experience. Submissions are reviewed before publication. Don’t include private or confidential information.</p>
-      <form id="review-form" data-review-endpoint="" novalidate>
+      <form id="review-form" data-review-endpoint="https://formspree.io/f/mwlvgqba" novalidate>
         <label for="review-name">Name or display name <span>Required</span></label><input id="review-name" name="name" autocomplete="name" maxlength="60" required>
         <label for="review-service">Service received <span>Required</span></label><select id="review-service" name="service" required><option value="" selected disabled>Select a service</option><option>CV Preparation</option><option>Visa Assistance</option><option>Assignment Assistance</option><option>LinkedIn Profile Support</option><option>Budget Travel Planning</option><option>Other</option></select>
         <label for="review-text">Your review <span>Required</span></label><textarea id="review-text" name="review" rows="5" maxlength="1200" required aria-describedby="review-guidance review-character-count"></textarea><div class="review-field-note"><span id="review-guidance">Share your honest experience (20–1,200 characters).</span><span id="review-character-count" aria-live="polite">0 / 1,200</span></div>
