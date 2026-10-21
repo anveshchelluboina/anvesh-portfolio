@@ -15,7 +15,7 @@
 .booking-head h3 em{color:#cbb28a}
 .contact-section .booking-head p{max-width:360px;margin:0 0 4px}
 .booking{position:relative;background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 90px rgba(4,16,12,.35)}
-.calendly-inline-widget{min-width:320px;height:700px}
+.calendly-inline-widget{width:100%;min-width:min(320px,100%);height:700px}
 .booking-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:30px;text-align:center;background:var(--white);transition:opacity .6s var(--ease),visibility 0s linear .6s}
 .booking-fallback:before{content:"";width:min(294px,76%);aspect-ratio:7/5;background:radial-gradient(circle closest-side,var(--sage) 58%,transparent 63%) 0 0/calc(100% / 7) 20%;-webkit-mask:linear-gradient(105deg,#000 40%,rgba(0,0,0,.3) 50%,#000 60%) 100% 0/300% 100%;mask:linear-gradient(105deg,#000 40%,rgba(0,0,0,.3) 50%,#000 60%) 100% 0/300% 100%;animation:shimmer 1.8s ease-in-out infinite}
 .contact-section .booking-fallback p{margin:0;color:var(--muted);font-size:13px}
