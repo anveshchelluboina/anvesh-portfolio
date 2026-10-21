@@ -2,20 +2,49 @@
 (() => {
   "use strict";
   const photoData = [
-    ["travel-01.jpg","On the road","ontheroad"],["travel-02.jpg","A quiet shoreline","ontheroad"],["travel-03.jpg","A detail along the way","ontheroad"],
-    ["travel-04.jpg","A little freedom","culture"],["travel-05.jpg","Old streets, new memories","cities"],["travel-06.jpg","A pause in the park","ontheroad"],
-    ["travel-07.jpg","A rainy city day","cities"],["travel-08.jpg","Walking without a rush","ontheroad"],["travel-09.jpg","A wide-open view","mountains"],
-    ["travel-10.jpg","A journey in motion","ontheroad"],["travel-11.jpg","A landmark moment","culture"],["travel-12.jpg","Paris, in a frame","cities"],
-    ["travel-13.jpg","City lines","cities"],["travel-14.jpg","A place worth stopping for","culture"],["travel-15.jpg","By the water","ontheroad"],
-    ["travel-16.jpg","Street-side stories","culture"],["travel-17.jpg","A green corner","ontheroad"],["travel-18.jpg","Cold air, clear mind","mountains"],
-    ["travel-19.jpg","Room to breathe","mountains"],["travel-20.jpg","A walk through town","cities"],["travel-21.jpg","Desert-side memories","ontheroad"],
-    ["travel-22.jpg","A night sky in the city","cities"],["travel-23.jpg","A day of discovery","culture"],["travel-24.jpg","Into the green","mountains"],
-    ["travel-25.jpg","Mountain air","mountains"],["travel-26.jpg","Winter walk","mountains"],["travel-27.jpg","Architecture in warm light","cities"],
-    ["travel-28.jpg","A city from above","cities"],["travel-29.jpg","Looking up","cities"],["travel-30.jpg","A day outdoors","ontheroad"],
-    ["travel-31.jpg","A different point of view","ontheroad"],["travel-32.jpg","A moment to slow down","ontheroad"],["travel-33.jpg","A landmark in the sun","culture"],
-    ["travel-34.jpg","The view was worth it","mountains"],["travel-35.jpg","A city across the water","cities"],["travel-36.jpg","A lookout point","mountains"],
-    ["travel-37.jpg","A colourful place","culture"],["travel-38.jpg","High above the valley","mountains"],["travel-39.jpg","The world opens up","mountains"],
-    ["travel-40.jpg","A mountain in monochrome","mountains"],["travel-41.jpg","A city after dark","cities"],["travel-42.jpg","A walk through history","culture"],["travel-43.jpg","Between destinations","ontheroad"]
+    {src:"travel-01.jpg",caption:"Out exploring with a camera",alt:"Anvesh wearing a camera strap beside a city road",category:"ontheroad"},
+    {src:"travel-02.jpg",caption:"Pyramids in the desert",alt:"Anvesh posing beside pyramids on a desert plateau",category:"culture"},
+    {src:"travel-03.jpg",caption:"A quiet shoreline",alt:"Sunset over a quiet beach and sea",category:"ontheroad"},
+    {src:"travel-04.jpg",caption:"A leap in the city",alt:"Anvesh leaping above a paved city square with historic buildings",category:"cities"},
+    {src:"travel-05.jpg",caption:"By the river in winter",alt:"Anvesh looking over a river from a stone bridge",category:"cities"},
+    {src:"travel-06.jpg",caption:"A pause in the park",alt:"Anvesh seated on a bench in a winter park",category:"ontheroad"},
+    {src:"travel-07.jpg",caption:"Ready for the next flight",alt:"Anvesh standing in front of a passenger airplane",category:"ontheroad"},
+    {src:"travel-08.jpg",caption:"Walking without a rush",alt:"Anvesh looking back along a tree-lined winter path",category:"ontheroad"},
+    {src:"travel-09.jpg",caption:"A city square beneath a stormy sky",alt:"An equestrian statue in a broad city square beneath storm clouds",category:"cities"},
+    {src:"travel-10.jpg",caption:"A journey in motion",alt:"Anvesh taking a selfie beside a Wizz Air airplane",category:"ontheroad"},
+    {src:"travel-11.jpg",caption:"A portrait beneath the Eiffel Tower",alt:"Anvesh posing with the Eiffel Tower behind him",category:"cities"},
+    {src:"travel-12.jpg",caption:"Paris, in a frame",alt:"The Eiffel Tower in Paris",category:"cities"},
+    {src:"travel-13.jpg",caption:"City lines",alt:"A city road and skyline framed by a large circular arch",category:"cities"},
+    {src:"travel-14.jpg",caption:"A city walk in Dubai",alt:"Anvesh standing before Dubai's modern skyline",category:"cities"},
+    {src:"travel-15.jpg",caption:"By the water",alt:"Anvesh beside the water with a coastal skyline behind him",category:"ontheroad"},
+    {src:"travel-16.jpg",caption:"Twin towers at golden hour",alt:"Two modern city towers in warm evening light",category:"cities"},
+    {src:"travel-17.jpg",caption:"A green corner",alt:"Anvesh seated on a bench among garden trees",category:"ontheroad"},
+    {src:"travel-18.jpg",caption:"Cold air, clear mind",alt:"Anvesh standing in a snowy landscape",category:"mountains"},
+    {src:"travel-19.jpg",caption:"Desert air",alt:"Anvesh with arms outstretched on a desert hillside",category:"ontheroad"},
+    {src:"travel-20.jpg",caption:"A walk through town",alt:"Anvesh standing on a cobbled city street",category:"cities"},
+    {src:"travel-21.jpg",caption:"A falconry moment in the desert",alt:"A falcon perched on Anvesh's arm in a sandy landscape",category:"culture"},
+    {src:"travel-22.jpg",caption:"Fireworks above the city",alt:"Fireworks lighting the Burj Khalifa above the downtown crowd",category:"cities"},
+    {src:"travel-23.jpg",caption:"A day of discovery",alt:"Anvesh in front of a historic domed building",category:"culture"},
+    {src:"travel-24.jpg",caption:"Into the green",alt:"A snow-capped peak above a forested mountain valley",category:"mountains"},
+    {src:"travel-25.jpg",caption:"Mountain air",alt:"Snow-covered mountain peaks above a forested valley",category:"mountains"},
+    {src:"travel-26.jpg",caption:"Winter walk",alt:"Anvesh standing on a snowy mountain slope",category:"mountains"},
+    {src:"travel-27.jpg",caption:"Architecture in warm light",alt:"Two modern towers catching the evening light",category:"cities"},
+    {src:"travel-28.jpg",caption:"A city from above",alt:"Dense city rooftops and high-rises viewed from above",category:"cities"},
+    {src:"travel-29.jpg",caption:"Looking up",alt:"A tall geometric skyscraper rising into a cloudy sky",category:"cities"},
+    {src:"travel-30.jpg",caption:"A day outdoors",alt:"Anvesh sitting on a scooter beside a green park",category:"ontheroad"},
+    {src:"travel-31.jpg",caption:"A different point of view",alt:"Anvesh looking across a mountain valley from a railing",category:"mountains"},
+    {src:"travel-32.jpg",caption:"A moment to slow down",alt:"Anvesh relaxing in a swimming pool among city high-rises",category:"cities"},
+    {src:"travel-33.jpg",caption:"A landmark in the sun",alt:"A white coastal tower and arches above a rocky shoreline",category:"culture"},
+    {src:"travel-34.jpg",caption:"The view was worth it",alt:"Anvesh at a mountain viewpoint above a valley",category:"mountains"},
+    {src:"travel-35.jpg",caption:"A city across the water",alt:"A broad city skyline across a river",category:"cities"},
+    {src:"travel-36.jpg",caption:"A lookout point",alt:"A slender tower rising beside a green hill and city",category:"cities"},
+    {src:"travel-37.jpg",caption:"A colourful place",alt:"A gold statue and colourful temple steps among limestone cliffs",category:"culture"},
+    {src:"travel-38.jpg",caption:"High above the valley",alt:"Anvesh looking out across a green mountain valley",category:"mountains"},
+    {src:"travel-39.jpg",caption:"The world opens up",alt:"Anvesh at a mountain viewpoint above a valley",category:"mountains"},
+    {src:"travel-40.jpg",caption:"A mountain in monochrome",alt:"A monochrome mountain range rising above clouds",category:"mountains"},
+    {src:"travel-41.jpg",caption:"A city after dark",alt:"An illuminated clock building under a cloudy night sky",category:"cities"},
+    {src:"travel-42.jpg",caption:"A walk through history",alt:"Anvesh standing before an old stone chapel and ruins",category:"culture"},
+    {src:"travel-43.jpg",caption:"Between destinations",alt:"Anvesh at a railway platform beside passenger trains",category:"ontheroad"}
   ];
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
@@ -26,16 +55,26 @@
     const toggle = $(".menu-toggle");
     const nav = $("#main-nav");
     if (!toggle || !nav) return;
+    const closeMenu = restoreFocus => {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation");
+      if (restoreFocus) toggle.focus();
+    };
     toggle.addEventListener("click", () => {
-        const open = nav.classList.toggle("is-open");
+      const open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
     });
     $$("a", nav).forEach(link => link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Open navigation");
+      closeMenu(false);
     }));
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) closeMenu(true);
+    });
+    document.addEventListener("pointerdown", event => {
+      if (nav.classList.contains("is-open") && !nav.contains(event.target) && !toggle.contains(event.target)) closeMenu(false);
+    });
   }
 
   function initHeader() {
@@ -106,18 +145,27 @@
   function initBooking() {
     const booking = $(".booking");
     if (!booking) return;
-    const loaded = () => booking.classList.add("is-loaded");
+    const fallbackMessage = $(".booking-fallback p", booking);
+    let loadTimeout;
+    const loaded = () => {
+      window.clearTimeout(loadTimeout);
+      booking.classList.add("is-loaded");
+    };
+    const unavailable = () => {
+      if (fallbackMessage) fallbackMessage.textContent = "The embedded calendar is unavailable. Use the booking page link instead.";
+    };
     const load = () => {
       const script = document.createElement("script");
       script.src = "https://assets.calendly.com/assets/external/widget.js";
       script.async = true;
-      // Keep the themed placeholder up until Calendly's iframe has something to show.
       script.onload = () => {
         const frame = $("iframe", booking);
         if (frame) frame.addEventListener("load", loaded, {once:true});
-        else loaded();
+        else unavailable();
       };
+      script.onerror = unavailable;
       document.body.appendChild(script);
+      loadTimeout = window.setTimeout(unavailable, 15000);
     };
     if (!canObserve) { load(); return; }
     const observer = new IntersectionObserver(entries => {
@@ -144,22 +192,29 @@
     const lightboxCaption = $("#lightbox-caption");
     const lightboxCounter = $("#lightbox-counter");
 
+    filters.forEach(button => {
+      const count = $("[data-filter-count]", button);
+      if (!count) return;
+      const filter = button.dataset.filter;
+      count.textContent = String(filter === "all" ? photoData.length : photoData.filter(photo => photo.category === filter).length);
+    });
+
     function filteredPhotos() {
-      return photoData.map((p, i) => ({ p, i })).filter(({p}) => activeFilter === "all" || p[2] === activeFilter);
+      return photoData.map((photo, i) => ({ photo, i })).filter(({photo}) => activeFilter === "all" || photo.category === activeFilter);
     }
     // append: keep the cards already shown and only add (and animate) the next batch
     function render(append = false) {
       const filtered = filteredPhotos();
       const start = append ? grid.children.length : 0;
       if (!append) grid.replaceChildren();
-      filtered.slice(start, visibleCount).forEach(({p, i}, n) => {
+      filtered.slice(start, visibleCount).forEach(({photo, i}, n) => {
         const filteredIndex = start + n;
         const button = document.createElement("button");
         button.type = "button";
         button.className = "photo-card";
         button.style.setProperty("--i", n);
-        button.setAttribute("aria-label", `Open photo ${i + 1}: ${p[1]}`);
-        button.innerHTML = `<img src="assets/photos/${p[0]}" alt="${p[1]}" loading="lazy" decoding="async"><span class="photo-card-caption"><span><b>${p[1]}</b><br><small>TRAVEL JOURNAL</small></span><small>${String(i + 1).padStart(2, "0")}</small></span>`;
+        button.setAttribute("aria-label", `Open photo ${i + 1}: ${photo.caption}`);
+        button.innerHTML = `<img src="assets/photos/${photo.src}" alt="${photo.alt}" loading="lazy" decoding="async"><span class="photo-card-caption"><span><b>${photo.caption}</b><br><small>TRAVEL JOURNAL</small></span><small>${String(i + 1).padStart(2, "0")}</small></span>`;
         const img = $("img", button);
         const loaded = () => img.classList.add("is-loaded");
         if (img.complete) loaded();
@@ -190,11 +245,11 @@
     function updateLightbox(step = 0) {
       const current = filteredPhotos()[activePhotoIndex];
       if (!current) return;
-      const p = current.p;
+      const photo = current.photo;
       lightboxImage.style.setProperty("--dir", String(Math.sign(step)));
-      lightboxImage.src = `assets/photos/${p[0]}`;
-      lightboxImage.alt = p[1];
-      lightboxCaption.textContent = p[1];
+      lightboxImage.src = `assets/photos/${photo.src}`;
+      lightboxImage.alt = photo.alt;
+      lightboxCaption.textContent = photo.caption;
       lightboxCounter.textContent = `${String(activePhotoIndex + 1).padStart(2, "0")} / ${filteredPhotos().length}`;
     }
     function moveLightbox(step) {
@@ -258,6 +313,7 @@
     const next = $("#next-slide");
     const fullscreenButton = $("#fullscreen-slide");
     const shell = deck.closest(".deck-shell");
+    const deckHint = $(".deck-hint");
     let current = 0;
     slides.forEach((slide, index) => {
       const dot = document.createElement("button");
@@ -275,6 +331,7 @@
         const active = i === current;
         slide.classList.toggle("is-current", active);
         slide.setAttribute("aria-hidden", String(!active));
+        slide.toggleAttribute("inert", !active);
       });
       dotButtons.forEach((dot, i) => {
         const active = i === current;
@@ -300,7 +357,9 @@
           try {
             if (document.fullscreenElement === shell) await document.exitFullscreen();
             else await shell.requestFullscreen();
-          } catch {
+          } catch (error) {
+            console.error("Could not change fullscreen mode.", error);
+            if (deckHint) deckHint.textContent = "Fullscreen is unavailable; continue using the regular slide view.";
             fullscreenButton.focus();
           }
         });
@@ -308,7 +367,8 @@
         updateFullscreenButton();
       }
     }
-    deck.addEventListener("keydown", event => {
+    shell.addEventListener("keydown", event => {
+      if (event.target !== deck && !event.target.closest(".deck-controls")) return;
       if (event.key === "ArrowRight" || event.key === "PageDown") { event.preventDefault(); show(current + 1); }
       if (event.key === "ArrowLeft" || event.key === "PageUp") { event.preventDefault(); show(current - 1); }
       if (event.key === "Home") { event.preventDefault(); show(0); }
@@ -401,7 +461,7 @@
     const endpoint = configuredEndpoint();
     submitButton.disabled = !endpoint;
     status.textContent = endpoint
-      ? "Submissions are sent for manual review. A review will only appear publicly after approval."
+      ? "This form is configured to send reviews to the moderation service. A submission is confirmed only after the service responds."
       : "Review submission is not configured yet, so this form cannot send or store reviews.";
     status.dataset.state = endpoint ? "ready" : "unconfigured";
     const dateInput = $("#review-date", form);
@@ -411,13 +471,6 @@
     }
     const reviewText = form.elements.namedItem("review");
     const characterCount = $("#review-character-count");
-    $$(".filter-chip").forEach(button => {
-      const count = button.querySelector("[data-filter-count]");
-      if (count) {
-        const filter = button.dataset.filter;
-        count.textContent = String(filter === "all" ? photoData.length : photoData.filter(photo => photo[2] === filter).length);
-      }
-    });
     if (reviewText && characterCount) {
       reviewText.addEventListener("input", () => {
         characterCount.textContent = `${reviewText.value.length} / 1,200`;
@@ -469,7 +522,8 @@
         status.dataset.state = "success";
         form.reset();
         if (characterCount) characterCount.textContent = "0 / 1,200";
-      } catch {
+      } catch (error) {
+        console.error("Review submission failed.", error);
         status.textContent = "We could not confirm that your review was received. It was not marked as submitted; please retry.";
         status.dataset.state = "error";
         if (retryButton) retryButton.hidden = false;

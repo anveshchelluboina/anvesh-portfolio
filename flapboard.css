@@ -20,6 +20,8 @@
 .booking-fallback:before{content:"";width:min(294px,76%);aspect-ratio:7/5;background:radial-gradient(circle closest-side,var(--sage) 58%,transparent 63%) 0 0/calc(100% / 7) 20%;-webkit-mask:linear-gradient(105deg,#000 40%,rgba(0,0,0,.3) 50%,#000 60%) 100% 0/300% 100%;mask:linear-gradient(105deg,#000 40%,rgba(0,0,0,.3) 50%,#000 60%) 100% 0/300% 100%;animation:shimmer 1.8s ease-in-out infinite}
 .contact-section .booking-fallback p{margin:0;color:var(--muted);font-size:13px}
 .booking.is-loaded .booking-fallback{opacity:0;visibility:hidden}
+.booking-direct{margin:12px 0 0;text-align:right;color:#d4b783;font-size:14px}
+.booking-direct a{text-decoration:underline;text-underline-offset:3px}
 .site-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px max(32px,calc((100vw - 1180px)/2));font-size:10px;color:var(--muted)}.footer-brand .brand-mark{width:35px;height:35px;font-size:14px}.footer-brand{font-size:11px}.footer-brand small{font-size:8px}.back-top{color:var(--green);font-weight:700}
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(10,19,15,.94);display:flex;align-items:center;justify-content:center;padding:50px 70px;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility 0s linear .4s}.lightbox.is-open{opacity:1;visibility:visible;transition:opacity .4s var(--ease),visibility 0s}.lightbox figure{margin:0;max-width:min(1000px,80vw);max-height:86vh;display:flex;flex-direction:column;align-items:center}.lightbox figure img{max-height:77vh;max-width:100%;object-fit:contain;box-shadow:0 20px 80px rgba(0,0,0,.25)}.lightbox figcaption{width:100%;display:flex;justify-content:space-between;gap:20px;color:#e8e8df;font-size:11px;padding-top:13px}.lightbox-close,.lightbox-nav{position:absolute;background:transparent;border:1px solid rgba(255,255,255,.4);color:white;border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:22px;display:grid;place-items:center}.lightbox-close{top:22px;right:24px;font-size:28px}.lightbox-nav{top:50%;transform:translateY(-50%)}.lightbox-prev{left:20px}.lightbox-next{right:20px}.lightbox-close:hover,.lightbox-nav:hover{background:white;color:var(--green)}
 /* Profile slide deck */
@@ -112,47 +114,7 @@ main{overflow-x:clip}
 .contact-links a{display:inline-flex;align-items:center;gap:6px}.contact-links .social-icon{width:14px;height:14px;flex:none}
 .service-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
 
-/* Larger headings improve readability across the portfolio. */
-h1{font-size:clamp(58px,7vw,92px)}
-.about-grid h2,.section-heading h2{font-size:clamp(42px,5vw,60px)}
-.journal-top h2{font-size:clamp(48px,6vw,70px)}
-.contact-section h2{font-size:clamp(50px,5.5vw,66px)}
-.service-card h3{font-size:28px}
-.slide-copy h1{font-size:clamp(50px,6vw,78px)}
-.slide-content h2{font-size:clamp(46px,5.7vw,70px)}
-@media(max-width:640px){
-  .hero h1{font-size:clamp(50px,14vw,76px)}
-  .about-grid h2,.section-heading h2{font-size:42px}
-  .journal-top h2{font-size:51px}
-  .contact-section h2{font-size:49px}
-  .slide-copy h1{font-size:51px}
-  .slide-content h2{font-size:42px}
-}
-
-/* Bring compact labels, captions and supporting links up to a readable size. */
-.brand{font-size:15px}
-.brand small,.footer-brand small{font-size:12px;letter-spacing:.07em}
-.main-nav{font-size:14px}
-.eyebrow,.section-label{font-size:12px;letter-spacing:.12em}
-.button,.text-link{font-size:14px}
-.hero-facts span,.ticker-track,.hero-stamp{font-size:12px}
-.hero-stamp span{font-size:11px}
-.mini-label,.card-index,.photo-count,.filter-chip,.gallery-bottom,.contact-links,.site-footer,.slides-footer,.deck-topline,.deck-hint{font-size:12px;letter-spacing:.06em}
-.credential-strip small,.service-card ul,.service-card p,.card-link,.journal-intro,.photo-card-caption,.slide-contact-links,.slide-lead,.slide-stat-row span,.slide-pill-grid small,.education-card span,.education-card small{font-size:12px}
-.photo-card-caption small{font-size:11px}
-.footer-brand{font-size:13px}
-@media(max-width:640px){
-  .brand{font-size:14px}
-  .brand small{font-size:11px}
-  .main-nav{font-size:14px}
-  .eyebrow,.section-label{font-size:11px}
-  .hero-facts span{font-size:11px}
-  .hero-note{font-size:13px}
-  .hero-stamp{font-size:11px}
-  .hero-stamp span{font-size:10px}
-  .filter-chip,.gallery-bottom,.site-footer{font-size:12px}
-  .photo-card-caption small{font-size:10px}
-}
+/* Shared contact details and icons */
 .portfolio-qr{display:flex;align-items:center;gap:16px;margin-top:24px;padding:12px;border:1px solid rgba(255,255,255,.2);transition:border-color .2s,transform .2s}.portfolio-qr:hover{border-color:#d4b783;transform:translateY(-2px)}.portfolio-qr img{width:92px;height:92px;background:#fff;padding:5px;image-rendering:pixelated}.portfolio-qr strong,.portfolio-qr small{display:block}.portfolio-qr strong{font-family:var(--serif);font-size:16px;font-weight:500}.portfolio-qr small{margin-top:4px;color:#c7d0c8;font-size:10px}
 .contact-whatsapp{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:#d4b783;font-size:12px}.contact-whatsapp:hover{text-decoration:underline}.contact-whatsapp .whatsapp-icon{width:16px;height:16px;fill:currentColor;flex:none}.contact-whatsapp span{transition:transform .2s}.contact-whatsapp:hover span{transform:translate(2px,-2px)}
 
@@ -245,7 +207,8 @@ h1{font-size:clamp(58px,7vw,92px)}
   --font-section:clamp(2.5rem,3.4vw,3rem);
   --font-card-title:clamp(1.375rem,1.8vw,1.75rem);
   --font-subheading:clamp(1.125rem,1.4vw,1.375rem);
-  --font-body:clamp(1rem,1.1vw,1.125rem)
+  --font-body:clamp(1rem,1.1vw,1.125rem);
+  --brass-ink:#76572d
 }
 body{font-size:var(--font-body)}
 p{font-size:var(--font-body);line-height:1.75}
@@ -258,6 +221,9 @@ h4{font-size:var(--font-subheading);line-height:1.3}
 .service-card ul,.credential-strip small,.slide-lead,.slide-contact-links,.slide-stat-row span,.slide-pill-grid small,.education-card span,.education-card small{font-size:15px}
 .brand,.main-nav,.button,.text-link,.card-link,.contact-links,.filter-chip,.gallery-bottom,.site-footer,.slides-footer,.deck-topline,.deck-hint{font-size:14px}
 .mini-label,.card-index,.eyebrow,.section-label,.photo-count{font-size:13px}
+.section-label span,.mini-label,.card-index{color:var(--brass-ink)}
+.service-featured .card-index{color:#d4b783}
+.filter-chip span{color:var(--brass-ink)}
 .brand small,.footer-brand small,.hero-facts span,.photo-card-caption,.photo-card-caption small,.hero-stamp,.hero-stamp span{font-size:13px}
 .contact-whatsapp{font-size:15px}
 .portfolio-qr strong{font-size:18px}
@@ -268,17 +234,27 @@ h4{font-size:var(--font-subheading);line-height:1.3}
 .review-privacy,.review-dialog form>label:not(.consent-label):not(.review-honeypot),.rating-field legend,.review-dialog input:not([type=radio]):not([type=checkbox]),.review-dialog select,.review-dialog textarea{font-size:16px}
 .review-dialog form>label>span,.review-dialog form>label>small,.rating-field legend small,.review-field-note,.consent-label,.review-form-status{font-size:14px}
 @media(max-width:1080px){
-  :root{--font-hero:clamp(2.375rem,5.5vw,4rem);--font-section:clamp(2.125rem,4.5vw,2.5rem)}
+  :root{--font-hero:clamp(2.375rem,5.5vw,4rem);--font-section:clamp(2.375rem,4.5vw,3rem)}
 }
 @media(max-width:760px){
   .hero{grid-template-columns:1fr;gap:35px}
   .hero-art{justify-self:center}
 }
 @media(max-width:640px){
-  :root{--font-hero:clamp(2.1rem,9vw,3.5rem);--font-section:clamp(2rem,7vw,2.5rem);--font-card-title:clamp(1.375rem,5.5vw,1.5rem);--font-subheading:1.125rem;--font-body:1rem}
+  :root{--font-hero:clamp(2.25rem,9vw,3.5rem);--font-section:clamp(2.25rem,7vw,2.5rem);--font-card-title:clamp(1.375rem,5.5vw,1.5rem);--font-subheading:1.125rem;--font-body:1rem}
   .hero h1{line-height:1.02}
   .hero-facts span{font-size:12px}
   .filter-chip,.gallery-bottom,.site-footer{font-size:13px}
   .review-card-head{font-size:13px}
   .review-card blockquote{font-size:15px}
+}
+.slide-copy h1{font-size:clamp(3.125rem,5vw,4.875rem)}
+.slide-content h2{font-size:clamp(2.875rem,4.5vw,3.75rem)}
+.filter-chip{min-height:44px}
+.lightbox-nav{width:44px;height:44px}
+.icon-button{width:44px;height:44px}
+@media(max-width:640px){
+  .slide-copy h1{font-size:clamp(2.75rem,8vw,3.2rem)}
+  .slide-content h2{font-size:clamp(2.375rem,7vw,2.75rem)}
+  .lightbox-nav{width:44px;height:44px}
 }
