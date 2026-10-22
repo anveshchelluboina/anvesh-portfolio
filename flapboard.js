@@ -403,7 +403,8 @@
       { name: "Khurram Ali", service: "Visa Assistance", text: "Very helpful with visa documentation and cover letters.", rating: 5 },
       { name: "Abid Hassan", service: "Visa Assistance", text: "Professional guidance throughout my visa application process.", rating: 5 },
       { name: "Lawrence", service: "Assignment Assistance", text: "Best assignment support. I received excellent grades.", rating: 5 },
-      { name: "Alice M", service: "Assignment Assistance", text: "Well-structured assignment delivered on time with great quality.", rating: 5 }
+      { name: "Alice M", service: "Assignment Assistance", text: "Well-structured assignment delivered on time with great quality.", rating: 5 },
+      { name: "Majd", service: "CV & Resume Support", text: "Anvesh was a big help. 100% I recommend him for everyone." }
     ];
     function renderReviews() {
       reviewList.replaceChildren();
